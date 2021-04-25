@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_card"
+    app:cardCornerRadius="8dp"
+
+    android:layout_margin="16dp"
+
+    android:layout_height="200dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ststeName"
+        android:text="Madhaya Pradesh"
+
+
+        android:textSize="24sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/total_cases"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+
+
+        android:text="Confermed: 120,000"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/active_cases"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+
+
+        android:text="Active: 12,000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recovered"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+
+        android:text="Recoverd: 900"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/death"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+
+        android:text="Death: 900"/>
+
+
+
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/last_updated"
+        android:layout_margin="12dp"
+        android:layout_gravity="bottom|right"
+
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/colorAccent"
+
+
+        android:text="Last Updated: 40,000"/>
+
+
+
+
+</androidx.cardview.widget.CardView>
