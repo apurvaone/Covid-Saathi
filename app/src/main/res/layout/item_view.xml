@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_card"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="12dp"
 
 
-    android:layout_margin="12dp"
+    android:layout_margin="9dp"
 
     android:layout_height="200dp">
 <LinearLayout
@@ -143,24 +143,25 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="1dp"
+        android:layout_gravity="top|right"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last Updated:"
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="11sp"
+            android:text="Last Updated"
+            android:textColor="@color/white"
 
-            android:textColor="@color/limeGreen"/>
+            android:textSize="12sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/last_updated"
-        android:layout_marginStart="3dp"
+
 
         android:fontFamily="@font/montserrat_bold"
         android:textSize="11sp"

@@ -3,6 +3,7 @@ package com.example.covidsaathi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
@@ -25,6 +26,17 @@ class MainActivity : AppCompatActivity() {
         mAdapter= StateAdapter()
 
         recycler_view.adapter=mAdapter
+
+     /*   getSupportActionBar()!!.setDisplayShowHomeEnabled(true)
+        getSupportActionBar()!!.setLogo(R.drawable.logo24)
+        getSupportActionBar()!!.setDisplayShowTitleEnabled(false)
+
+        getSupportActionBar()!!.setDisplayUseLogoEnabled(true)
+*/
+
+        this.getSupportActionBar()?.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar()?.setDisplayShowCustomEnabled(true);
+       supportActionBar!!.setCustomView(R.layout.custom_actionbar)
 
     }
 
