@@ -1,5 +1,7 @@
 package com.example.covidsaathi
 
+import java.util.*
+
 data class State(
         val stateName:String,
      val confirmed:String,

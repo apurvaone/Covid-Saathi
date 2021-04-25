@@ -3,79 +3,174 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_card"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
 
-    android:layout_margin="16dp"
+
+    android:layout_margin="12dp"
 
     android:layout_height="200dp">
 <LinearLayout
     android:layout_width="match_parent"
     android:padding="8dp"
+    android:background="@drawable/bg"
+
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/ststeName"
-        android:text="Madhaya Pradesh"
-
-
-        android:textSize="24sp"/>
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+
+        android:fontFamily="@font/archivo_black"
+        android:text="Madhaya Pradesh"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmed:"
+            android:textColor="#EFE9B5"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat_bold"/>
+
+
+    <TextView
         android:id="@+id/total_cases"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="18sp"
 
+        android:fontFamily="@font/montserrat_bold"
+        android:text="120,000"
+        android:textColor="#EFE9B5"
+        android:textSize="17sp" />
 
-        android:text="Confermed: 120,000"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active:"
+            android:textColor="#EFE9B5"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/active_cases"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:textSize="20sp"
+        android:textSize="17sp"
+        android:textColor="#EFE9B5"
+        android:fontFamily="@font/montserrat_bold"
 
 
-        android:text="Active: 12,000"/>
+        android:text="12,000"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recovered:"
+            android:textColor="#EFE9B5"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recovered"
-        android:textSize="20sp"
+        android:textSize="17sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#EFE9B5"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="900"/>
 
-        android:text="Recoverd: 900"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Death:"
+            android:textColor="#EFE9B5"
+            android:textSize="17sp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_bold"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/death"
-        android:textSize="20sp"
+        android:textSize="17sp"
+        android:layout_marginStart="5dp"
+        android:textColor="#EFE9B5"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="900"/>
 
-        android:text="Death: 900"/>
+    </LinearLayout>
 
 
 
 
 </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="1dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Updated:"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="11sp"
+
+            android:textColor="@color/limeGreen"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/last_updated"
-        android:layout_margin="12dp"
-        android:layout_gravity="bottom|right"
+        android:layout_marginStart="3dp"
 
-        android:textSize="16sp"
-        android:fontFamily="sans-serif"
-        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="11sp"
+
+        android:textColor="@color/limeGreen"
 
 
-        android:text="Last Updated: 40,000"/>
+        android:text="40,000"/>
+
+    </LinearLayout>
 
 
 

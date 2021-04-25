@@ -10,4 +10,5 @@
     <color name= "colorPrimary">#4a4e69</color>
     <color name="colorPrimaryDark">#22223b</color>
     <color name="colorAccent">#9a8c98</color>
+    <color name="limeGreen">#32CD32</color>
 </resources>
