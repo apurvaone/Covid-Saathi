@@ -6,13 +6,17 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StateAdapter: RecyclerView.Adapter<StateViewHolder>() {
+class StateAdapter(private val listener:StateItemClicked): RecyclerView.Adapter<StateViewHolder>() {
     private  val items:ArrayList<State> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StateViewHolder {
 
         val view= LayoutInflater.from(parent.context).inflate(R.layout.item_view,parent,false)
         val viewHolder= StateViewHolder(view)
+
+        view.setOnClickListener {
+            listener.onItemClicked(items[viewHolder.adapterPosition])
+        }
         return viewHolder
     }
 
@@ -50,3 +54,8 @@ class StateViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     val lastupdated:TextView=itemView.findViewById(R.id.last_updated)
 
 }
+
+
+    interface StateItemClicked{
+        fun onItemClicked(item:State)
+    }

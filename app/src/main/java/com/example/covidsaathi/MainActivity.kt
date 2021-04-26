@@ -1,5 +1,6 @@
 package com.example.covidsaathi
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +9,9 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.afollestad.materialdialogs.LayoutMode
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.bottomsheets.BottomSheet
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -16,7 +20,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 //AIzaSyAFetOVp1JvGBBp2QnJHF8GKi0lXSnQBZw
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),StateItemClicked{
     lateinit var progressBar: ProgressBar
     private lateinit var  mAdapter:StateAdapter
 
@@ -28,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         recycler_view.layoutManager= LinearLayoutManager(this)
         progressBar= findViewById(R.id.progress_bar)
         fetchData()
-        mAdapter= StateAdapter()
+        mAdapter= StateAdapter(this)
 
         recycler_view.adapter=mAdapter
 
@@ -147,6 +151,14 @@ progressBar.visibility=View.VISIBLE
 
         val dt1:Date= SimpleDateFormat("dd/MM/yyyy HH:mm:ss").parse(dts)
         return dt1
+    }
+
+    override fun onItemClicked(item: State) {
+
+        val dialog = MaterialDialog(this, BottomSheet(LayoutMode.MATCH_PARENT)).show {
+
+        }
+
     }
 
 
