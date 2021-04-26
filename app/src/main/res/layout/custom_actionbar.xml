@@ -5,24 +5,26 @@
     android:layout_height = "wrap_content"
     android:background="@color/colorPrimary"
     android:gravity = "center_vertical"
-    android:padding = "10dp"
+    android:padding = "1dp"
     android:weightSum = "1">
     <LinearLayout
         android:layout_width = "0dp"
         android:layout_height = "match_parent"
         android:layout_weight = "0.6">
-        <ImageView
+      <!--  <ImageView
             android:layout_width = "wrap_content"
             android:layout_height = "match_parent"
-            android:src = "@drawable/logo24" />
+
+            android:src = "@drawable/logo24" />-->
         <TextView
             android:id = "@+id/name"
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
             android:layout_marginLeft = "10dp"
             android:text = "Covid Saathi"
-            android:textSize = "22sp"
-            android:textColor = "@color/white"
+            android:textSize = "23sp"
+            android:paddingBottom="1dp"
+            android:textColor = "#BCD8DC"
             android:textStyle = "bold"
             android:fontFamily="@font/roboto_bold"/>
     </LinearLayout>
